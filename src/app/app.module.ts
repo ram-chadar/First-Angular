@@ -1,18 +1,28 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {
+    ColageListService
+}
+from './colage-list.service';
+import {
+    BrowserModule
+}
+from '@angular/platform-browser';
+import {
+    NgModule
+}
+from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-
-@NgModule({
-  declarations: [
+import {
+    AppRoutingModule, routingComponents
+}
+from './app-routing.module';
+import {
     AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
+}
+from './app.component';
+import {
+    MyTableComponent
+}
+from './my-table/my-table.component';
+import { LoginComponent } from './login/login.component';
+
+@NgModule({ declarations: [AppComponent, MyTableComponent, routingComponents, LoginComponent ], imports: [BrowserModule, AppRoutingModule ], providers: [ColageListService], bootstrap: [AppComponent] }) export class AppModule {}
